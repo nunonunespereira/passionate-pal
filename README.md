@@ -17,12 +17,12 @@ Login Page:
 https://user-images.githubusercontent.com/127306885/234362003-c00164e1-b0dd-46c6-93e2-4073ca3807f8.mov
 
 
-Choose your bot (Johnny or Frances):
+Welcome Page:
 
 https://user-images.githubusercontent.com/127306885/234362026-e60614c5-c1ad-4ac6-90e6-d05cc5bad5d5.mov
 
 
-Chat with either and ask for romantic advice:
+Choose your bot (Johnny or Frances), start chatting with either and ask for romantic advice:
 
 https://user-images.githubusercontent.com/127306885/234362043-3a002964-290e-41d3-b729-07d43a843649.mov
 
