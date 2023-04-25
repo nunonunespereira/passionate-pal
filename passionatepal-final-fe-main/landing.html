@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <meta charset="UTF-8">
+  <title>PassionatePal</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+    
+
+* {
+margin: 0;
+  background-color: #f8f8f8
+
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+
+}
+
+.quote {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 35vh;
+  background-color: #f8f8f8;
+}
+
+.quotel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 35vh;
+  background-color: #f8f8f8;
+}
+
+.quote h1 {
+  font-size: 6em;
+  text-align: right;
+  width: 100%;
+  padding-right: 200px;
+  line-height: 1.1;
+  color: hotpink;
+}
+
+.quotel h1 {
+  font-size: 6em;
+  text-align: left;
+  width: 100%;
+  padding-left: 200px;
+  line-height: 1.1;
+  color: hotpink;
+ }
+
+
+
+.cta {
+  text-align: right;
+  padding-right: 200px;
+              background-color: #f8f8f8
+              
+
+}
+
+.ctal {
+    text-align: left;
+  padding-left: 200px;
+  margin-top: 30px;
+              background-color: #f8f8f8
+}
+
+.cta button {
+  font-size: 2.5em;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  text-transform: none;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  position: relative;
+  animation: bounce 1s infinite alternate;
+  animation-delay: 6s;
+}
+
+@keyframes bounce {
+			from {
+				transform: translateY(0);
+			}
+			to {
+				transform: translateY(-20px);
+			}
+		}
+
+
+.ctal button {
+  font-size: 2.5em;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  text-transform: none;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  position: relative;
+  animation: bouncel 1s infinite alternate;
+  animation-delay: 6s;
+}
+
+@keyframes bouncel {
+			from {
+				transform: translateY(0);
+			}
+			to {
+				transform: translateY(+20px);
+			}
+		}
+
+
+.cta button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  animation-name: draw-border;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.ctal button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  animation-name: draw-border;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.cta button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 3px solid hotpink;
+  border-radius: 5px;
+  transition: all 1s ease-in-out;
+}
+
+.ctal button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 3px solid hotpink;
+  border-radius: 5px;
+  transition: all 1s ease-in;
+}
+
+.cta button:hover {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%23FFB6C1"/></svg>'), auto;
+}
+
+.ctal button:hover {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%23FFB6C1"/></svg>'), auto;
+}
+
+.cta button:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.ctal button:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.cta button:active::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  border: 2px solid hotpink;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.ctal button:active::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  border: 2px solid hotpink;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.cta button:focus {
+  transform: translateX(-270px);
+  transition: all 1s ease-in-out;
+}
+
+.ctal button:focus {
+  transform: translateX(270px);
+  transition: all 1s ease-in-out;
+}
+
+.cta button span {
+  display: block;
+  text-align: right;
+}
+
+.ctal button span {
+  display: block;
+  text-align: right;
+}
+
+
+.credits {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2.5em;
+  font-weight: 900;
+  text-align: right;
+  width: 60vw;
+  bottom: 0;
+  padding-bottom: 20px;
+  position: absolute;
+  right: 0;
+}
+
+
+    .credits span {
+      display: inline-block;
+      margin-right: 150px;
+    }
+
+    .credits span:last-child {
+  margin-right: 190px;
+}
+
+.diagonal-line {
+  position: absolute;
+  top: -10px;
+  left: 200px;
+  margin-bottom: 50px;
+  border-top: 5px solid hotpink;
+  animation: draw 10s forwards;
+  transform-origin: left top;
+  transform: rotate(36deg);
+}
+
+@keyframes draw {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+
+    
+
+
+
+  </style>
+</head>
+<body>
+
+
+ 
+    
+
+
+  <div class="wrapper">
+    <div class="left">
+        <img src="j.png" style="position: absolute; top: 120px; right: 20px; width: 170px; height: 170px;">
+
+      <div class="quote">
+        <h1>Hi, I'm Johnny.<br>How are<br> you today?</h1>
+      </div>
+
+      
+      
+    </div>
+    <div class="right">
+
+        <img id="myImage" src="musical-note.png" style="position: absolute; top: 45px; left: 50px; width: 70px; height: 70px;">
+
+        <img src="f.png" style="position: absolute; top: 940px; left: 10px; width: 170px; height: 170px;">
+        <div class="cta">
+            <button onclick="delayedRedirect()">I'm good Johnny, <br><span style="text-align: right;">thanks for asking.</span><span style="text-align: right;">Let's get started!</span></button>
+          </div>
+    </div>
+
+
+    
+    <div class="left">
+    <div class="ctal">
+        <button onclick="delayedRedirect()">Very well Frances, <br><span style="text-align: left;">nice of you to ask.  </span><span style="text-align: left;">  Let's get started!</span></button>
+      </div>
+
+      <div class="quotel">
+        <h1>Hello, I'm Frances.<br>Are you feeling<br> well today?</h1>
+      </div>
+
+</div>
+  </div>
+</div>
+
+</div>
+
+  <div class="credits">
+    <span style="color: hotpink; font-weight: 900;">PassionatePal companion app made by</span>
+    <span><a href="about.html">PPTECH</a></span>
+  </div>
+
+  <div class="diagonal-line"></div>
+
+  
+
+
+  <script>
+    function delayedRedirect() {
+      setTimeout(function() {
+        window.location.href = "index.html";
+      }, 1000); // 3 second delay
+    }
+  </script>
+
+<script>
+    var audio = new Audio('sound2.mp3');
+    audio.loop = true;
+    var image = document.getElementById('myImage');
+    image.addEventListener('click', function() {
+      audio.play();
+    });
+</script>
+
+</body>
+</html>

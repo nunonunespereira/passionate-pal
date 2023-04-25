@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bouncing Button</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<style>
+
+        .body {
+            background-color: #f8f8f8
+        }
+        
+		.center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+   
+
+.bounce {
+    font-size: 10rem;
+    font-family: 'Poppins Thin', sans-serif;
+    color: hotpink;
+    font-weight: 100;
+    animation: bounce 0.5s infinite alternate;
+    border-radius: 20%;
+    border: 2px solid transparent;
+    transition: transform 0.0s ease-in-out, border-width 4s ease-in-out; /* add transition for transform and border-width */
+    transform: scale(30); /* add initial transform scale */
+}
+
+.bounce:hover {
+    color: white;
+    background-color: hotpink;
+    border-radius: 20px;
+    border-color: hotpink;
+    border-width: 100px; /* increase border width on hover */
+    border-style: solid;
+    transform: scale(1000); /* add transform scale on hover */
+}
+
+@keyframes bounce {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-30px);
+	}
+}
+
+
+
+	</style>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="center">
+		<a href="landing.html" class="btn btn-lg bounce">Chat cenas.</a>
+	</div>
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

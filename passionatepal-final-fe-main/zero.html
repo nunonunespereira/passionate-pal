@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bouncing Button</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<style>
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #f8f8f8;
+            animation-name: fade-in;
+            animation-duration: 10s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            }
+
+            @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+
+            }
+        
+		.center {
+          
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+
+   
+
+.bounce {
+    
+    margin: 10px;
+	border: 40px solid hotpink;
+    font-size: 15rem;
+    font-family: 'Poppins Thin', sans-serif;
+    color: hotpink;
+    font-weight: 100;
+    animation: bounce 1s infinite alternate;
+    border-radius: 20%;
+    border: 2px solid transparent;
+    transition: transform 1s ease-in-out, border-width 4s ease-in-out, background-color 1s ease-in-out;
+    transform: scale(30); /* add initial transform scale */
+}
+
+.bounce:hover {
+  color: hotpink;
+  background-color: rgba(255, 105, 180, 0);
+  border-width: 100px;
+  border-style: solid;
+  transform: scale(1000);
+  transition: all 4s ease;
+}
+
+.bounce:hover {
+  transition-delay: 1s;
+  color: white;
+}
+
+.bounce:hover:hover {
+    background-color: rgba(255, 105, 180, 1);
+}
+
+@keyframes bounce {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-30px);
+	}
+}
+
+.rectangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1300px;
+  height: 700px;
+  border: 10px solid hotpink;
+  background-color: transparent;
+}
+
+
+
+
+	</style>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="rectangle"></div>
+	<div class="center">
+        <a href="landing.html" class="btn btn-lg bounce" id="myButton">Hi.</a>
+      </div>
+      
+
+
+      <audio id="myAudio" autoplay>
+        <source src="sound.mp3" type="audio/mp3">
+    </audio>
+
+
+        <script>
+
+            function playSound() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+            }           
+        </script>
+      <script>
+        myButton.addEventListener("click", function(event) {
+            // Prevent the default navigation behavior
+            event.preventDefault();
+
+            // Play the sound
+            playSound();
+
+            // Wait for 4 seconds before navigating to the linked page
+            setTimeout(function() {
+                window.location.href = myButton.getAttribute("href");
+            }, 4000);
+            });
+      </script>
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+    <audio id="myAudio" autoplay>
+        <source src="sound.mp3" type="audio/mp3">
+    </audio>
+
+</body>
+</html>

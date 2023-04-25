@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bouncing Button</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<style>
+
+
+
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+
+
+
+        
+		.center {
+          
+	margin: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+
+   
+
+.bounce {
+    
+    margin: 0px;
+	position: absolute;
+    top: 0%;
+    font-size: 5rem;
+    font-family: 'Poppins Thin', sans-serif;
+    color: white;
+    font-weight: 900;
+    animation: bounce 1s infinite alternate;
+    border-radius: 20%;
+    border: 2px solid transparent;
+    transition: transform 1s ease-in-out, border-width 4s ease-in-out, background-color 1s ease-in-out;
+    transform: scale(30); /* add initial transform scale */
+}
+
+.bounce:hover {
+  color: white;
+  
+}
+
+
+
+
+@keyframes bounce {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-00px);
+	}
+}
+
+#myButton {
+  text-shadow: 0 0 5px #fff;
+  color: white; /* Set a darker color for the text to contrast with the white shadow */
+}
+
+.text-block {
+            position: absolute;
+            top: 55%;
+            left: 10%;
+			margin: 10px auto;
+            color: white;
+			width: 80%;
+            vertical-align: bottom;
+			text-align: justify;
+			text-justify: inter-word;
+		}
+
+   
+
+
+	</style>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+
+    <img src="pptech2.png" style="position: absolute; top: 15%; right: 30%;border-radius: 5%; width: 948.6px; height: 453.6px;border: 8px solid rgba(255, 255, 255, 0.1); ">
+
+    <a href="landing.html"><img id="logo" src="1.png" style="position: absolute; top: 82%; right: 45%;border-radius: 5%; width: 250px; height: 250px; "></a>
+
+
+    <div class="text-block" id="text" style="font-weight: 700; font-size: 2em;">
+        
+        
+                    We came together with a shared vision to create a platform that offers not only romantic counseling services to users, but also a friend who is caring and considerate. Our goal is to provide users with a safe and secure space where they can seek guidance and support in matters of the heart. We believe that everyone deserves to have a fulfilling and happy love life, and our website is designed to facilitate that. Whether someone is struggling with a breakup, navigating the early stages of a relationship, or simply seeking advice on how to improve their dating skills, our implementation of ChatGPT will provide them with helpful insights and recommendations.
+
+     
+                As a team, we are committed to providing our users with the best possible experience on our website. We have worked tirelessly to ensure that the chatbot is user-friendly, intuitive, and reliable, like a true friend. Our ultimate goal is to empower people to take control of their romantic lives and achieve their relationship goals with the help of ChatGPT's expertise.        
+
+
+    </div>
+    
+	<div class="center">
+        <a class="btn btn-lg bounce" id="myButton">About PPTECH.</a>
+      </div>
+
+      
+
+      
+
+
+     
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        var text = document.getElementById("text").innerHTML;
+        var i = 0;
+        document.getElementById("text").innerHTML = "";
+
+        function type() {
+            if (i < text.length) {
+                document.getElementById("text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, 20);
+            }
+        }
+
+        type();
+    </script>
+
+
+</script>
+</body>
+</html>

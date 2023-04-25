@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bouncing Button</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<style>
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #f8f8f8;
+            animation-name: fade-in;
+            animation-duration: 10s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            }
+
+            @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+
+            }
+        
+		.center {
+            text-shadow: 0 0 20px #fff;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+
+   
+
+.bounce {
+    
+    margin: 10px;
+	border: 40px solid hotpink;
+    font-size: 15rem;
+    font-family: 'Poppins Thin', sans-serif;
+    color: white;
+    font-weight: 100;
+    animation: bounce 1s infinite alternate;
+    border-radius: 20%;
+    border: 2px solid transparent;
+    transition: transform 1s ease-in-out, border-width 4s ease-in-out, background-color 1s ease-in-out;
+    transform: scale(30); /* add initial transform scale */
+}
+
+.bounce:hover {
+    color: hotpink;
+}
+
+@keyframes bounce {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-30px);
+	}
+}
+
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+
+
+
+	</style>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <img id="myImage" src="2.png" style="position: absolute; top: 45px; left: 40%; width: 400px; height: 400px;">
+
+	<div class="center">
+        <a href="sign-in.html" class="btn btn-lg bounce" id="myButton" style="border: 0px;">log in.</a>
+      </div>
+
+      <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+      
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

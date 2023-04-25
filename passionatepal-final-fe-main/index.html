@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>PiPi</title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <style>
+        body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+
+}
+    </style>
+
+
+    <body>
+    
+    <main class="content">
+
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="gradient-custom">
+        <div class="py-5">
+    
+            <div style="display: flex;">
+                <div style="text-align: left;">
+                  <img src="Resources/banner.png" width="700" height="250"/>
+                </div>
+                
+                <nav class="Menu" Style="text-align: left;">
+                    
+                  <ul style="text-align: right;">
+                    <h1 class="font-weight-bold mb-1">I'm feeling</h1>
+                    <p></p>
+                    <button onclick="playMusic('sexyAudio')" class="btn btn" style="color:white; background-color: hsl(308, 79%, 41%); font-size: 30px;">Sexy</button> 
+                    <audio id="sexyAudio">
+                        <source src="Resources/sexyAudio.mp3" type="audio/mpeg">
+                      </audio>
+                    <button onclick="playMusic('depressedAudio')" class="btn btn" style="color:white; background-color: hsl(308, 47%, 47%); font-size: 30px;">Depressed</button>
+                    <audio id="depressedAudio">
+                        <source src="Resources/depressedAudio.wav" type="audio/mpeg">
+                      </audio>
+                    <button onclick="playMusic('happyAudio') "class="btn btn" style="color:white; background-color: hsl(308, 46%, 54%); font-size: 30px;">Happy</button>
+                    <audio id="happyAudio">
+                        <source src="Resources/happyAudio.mp3" type="audio/mpeg">
+                      </audio>
+                      <button onclick="playMusic('peacefulAudio') "class="btn btn" style="color:white; background-color: hsl(308, 38%, 57%); font-size: 30px;">Peaceful</button>
+                    <audio id="peacefulAudio">
+                        <source src="Resources/relaxAudio.mp3" type="audio/mpeg">
+                      </audio>
+                      <button onclick="playMusic('') "class="btn btn" style="color:white; background-color: hsl(308, 31%, 59%); font-size: 30px;">Off</button>
+                     
+                  </ul>
+                </nav>
+              </div>
+            <p></p>
+            <div class="flex-grow-0 py-3 px-4 border-top" style="color: white;"></div>
+
+                
+            <div class="card-place">
+                <div class="row g-0">
+                    <div class="col-12 col-lg-5 col-xl-3 border-right">
+                        
+
+    					<div class="px-4 d-none d-md-block">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                   
+                                    <button type="button" class="btn btn-pink button-sites" style="color:white; background-color: hsl(308, 79%, 41%);" onclick='window.location.href="https://tinder.com"'>Tinder</button>
+                                    <p></p>
+                                    <button type="button" class="btn btn-pink button-sites" style="color:white; background-color: hsl(308, 47%, 47%);" onclick='window.location.href="https://spotify.com"'>Spotify</button>
+                                    <p></p>
+                                    <button type="button" class="btn btn-pink button-sites" style="color:white; background-color: hsl(308, 46%, 54%);" onclick='window.location.href="https://netflix.com"'>Netflix</button>
+                                    <p></p>
+                                    <button type="button" class="btn btn-pink button-sites" style="color:white; background-color: hsl(308, 38%, 57%);" onclick='window.location.href="https://thefork.com"'>The Fork</button>
+                                    <p></p>
+                                    <button type="button" class="btn btn-pink button-sites" style="color:white; background-color: hsl(308, 31%, 59%);" onclick='window.location.href="https://www.academiadecodigo.org/"'>Academia de Código</button>
+                                    
+                                </div>
+                                </div>
+                        </div>
+
+                        <div class="messages-wrapper" id="messages-wrapper">
+
+                        <div class="borderList">
+                           
+                        </div>
+                        <hr class="d-block d-lg-none mt-1 mb-0">
+                    </div>
+                </div>
+                    
+                    <div class="col-12 col-lg-7 col-xl-9 dopadding">
+
+    
+                        <div class="position-relative">
+                            <div class="chat-messages p-4" style="color: white;">
+
+
+
+                                <div class="chat-message-left pb-4">
+                                    <div>
+                                        <img src="Resources/ele.png" class="rounded-circle mr-1" alt="Sharon Lessman" width="60" height="60">
+                                        <div class="text-muted small text-nowrap mt-2"></div>
+                                    </div>
+                                    <div class="card mask-custom">
+                                    <div class="flex-shrink-1 rounded py-2 px-3 ml-3" style="color: white;">
+                                        <div class="font-weight-bold mb-1" style="color: white;">PassionatePal</div>
+                                        
+                                        <div class="flex-grow-0 py-3 px-4 border-top" style="color: white;">
+                                            Hello! My name is Passionate Pal and I'm here to help you with your love and fortune issues. Do go ahead and ask me a question or give me your thoughts and I will try to help with you in the best way!
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+    
+                        <div class="flex-grow-0 py-3 px-4 border-top absolute">
+                            <div class="input-group">
+                                <input type="text" id ="send-button-text" class="form-control" placeholder="Type your message">
+                                <button class="btn btn" style="color:white; background-color: rgb(154, 78, 144);" id="send-button"><b>Send</b></button>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <br>
+                   
+                </div>
+                <br>
+            
+                <div class="credits">
+                    <a href="landing.html" class="flex-grow-0" style="color: rgb(212, 202, 202)">HOME    </a>
+                    <span class="flex-grow-0" style="color: rgb(202, 16, 150) ">_____ PassionatePal company app made by</span>
+                    <a href="about.html" class="flex-grow-0" style="color: rgb(212, 202, 202)">PPTECH</a>
+                    <span class="flex-grow-0" style="color: rgb(202, 16, 150) ">_____ </span>
+                    <a href="login.html" class="flex-grow-0" style="color: rgb(212, 202, 202)">    LOGOUT</a>
+                  </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    
+
+    <script src="./script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+</body>
+</html> 

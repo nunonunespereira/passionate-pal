@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.academiadecodigo.thefellowshift.passionatepal.PassionatepalApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.109 s - in org.academiadecodigo.thefellowshift.passionatepal.PassionatepalApplicationTests
