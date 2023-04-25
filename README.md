@@ -8,17 +8,21 @@ The bot can answer every prompt we guve him in a considerate and loving manner (
 
 
 Landing Page:
+
 https://user-images.githubusercontent.com/127306885/234361777-a0f9cb07-6f4f-4310-bee0-30326fb82d33.mov
 
 
 Login Page:
+
 https://user-images.githubusercontent.com/127306885/234362003-c00164e1-b0dd-46c6-93e2-4073ca3807f8.mov
 
 
 Choose your bot (Johnny or Frances):
+
 https://user-images.githubusercontent.com/127306885/234362026-e60614c5-c1ad-4ac6-90e6-d05cc5bad5d5.mov
 
 
 Chat with either and ask for romantic advice:
+
 https://user-images.githubusercontent.com/127306885/234362043-3a002964-290e-41d3-b729-07d43a843649.mov
 
